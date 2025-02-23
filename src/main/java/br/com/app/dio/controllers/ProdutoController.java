@@ -26,6 +26,6 @@ public class ProdutoController {
 
     @GetMapping("get-all")
     public ResponseEntity<List<ProdutoDTO>> getAll() {
-        produtoService
+        return ResponseEntity.ok(produtoService.findAll());
     }
 }
